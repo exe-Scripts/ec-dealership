@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Dealership by TacoTheDev // Enhanced Studios</title>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen relative">
+    <div id="vehicleshop" class="bg-zinc-950 w-[125vh] h-[70vh] rounded-lg relative border-4 border-zinc-800">
+        <div id="navigation-bar" class="flex items-center p-4 justify-between">
+            <h1 class="text-4xl font-bold text-white">Dealership</h1>
+            <div class="mt-2">
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('all')">All</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('customs')" data-buttonclass="customs">Customs</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('super')" data-buttonclass="super">Super</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('suvs')" data-buttonclass="suvs">SUV</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('muscle')" data-buttonclass="muscle">Muscle</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('sports')" data-buttonclass="sports">Sports</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('motorcycles')" data-buttonclass="motorcycles">Motorcycles</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('offroad')" data-buttonclass="offroad">Off-road</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('vans')" data-buttonclass="vans">Vans</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('coupes')" data-buttonclass="coupes">Coupes</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('compacts')" data-buttonclass="compacts">Compacts</button>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-[5px] px-4 rounded mr-2 transition-transform transform hover:scale-110" onclick="showCategory('sedans')" data-buttonclass="sedans">Sedans</button>
+            </div>
+        </div>
+        <div class="flex items-center justify-center mt-1">
+            <input type="text" id="searchInput" class="rounded-sm py-[2px] px-[50.7vh] bg-zinc-900 text-center text-white border-2 border-zinc-800" placeholder="Search...">
+        </div>
+
+        <div id="cars" class="flex flex-wrap gap-4 p-4 justify-center h-[55vh] overflow-y-scroll mt-4">
+        </div>
+    </div>
+    <div id="InfoBox" class="absolute bg-zinc-950 w-[30vh] h-[25vh] rounded-lg m-4 flex flex-col justify-center items-center border-4 border-zinc-800 bottom-2 right-2">
+        <h1 id="carName" class="text-white text-center text-3xl mt-2 font-semibold"></h1>
+        <h1 id="price" class="text-white text-center text-xl mt-6 font-semibold"></h1>
+        <h1 id="carSpeed" class="text-white text-center text-xl mt-2 font-semibold"></h1>
+        <h1 class="text-white text-center text-2xl mt-6 font-bold"> [<span class="text-green-500">ENTER</span>] to buy</h1>
+        <h1 class="text-white text-center text-2xl mt-2 font-bold">[<span class="text-red-500">BACKSPACE</span>] to return</h1>
+    </div>
+<!--      -->
+    <script src="index.js"></script>
+</body>
+</html>
