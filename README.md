@@ -1,7 +1,7 @@
 # ec-dealership
 
 ## Join discord for support or questions
-https://discord.gg/8tpGYN2DS9
+https://discord.gg/fp-leak
 
 # Before use!
 - Onesync needs to be enable
